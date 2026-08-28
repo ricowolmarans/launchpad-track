@@ -1,4 +1,4 @@
-const API = 'https://api.launchpad-studio.co.za'; // point at your deployed Worker
+const API = 'https://ingest.launchpad-studio.co.za';
 
 let currentOrder = null;
 

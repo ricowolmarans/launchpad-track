@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Track Your Project — Launchpad Studio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <span class="brand">LAUNCHPAD<span class="accent">.</span></span>
+      <span class="tag">Project Tracking</span>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="lookup-screen">
+      <h1>Track your order</h1>
+      <p class="muted">Enter your tracking username to check progress.</p>
+      <form id="lookup-form">
+        <input type="text" id="tracking_username" placeholder="e.g. rico-motors" required autocomplete="off">
+        <button type="submit">Continue</button>
+      </form>
+      <p id="lookup-error" class="error hidden"></p>
+    </section>
+
+    <section id="order-screen" class="hidden">
+      <div class="order-head">
+        <h1 id="order-company">—</h1>
+        <span id="order-status" class="status-pill">—</span>
+      </div>
+      <p class="muted">Package: <span id="order-tier">—</span></p>
+
+      <div class="panel" id="preview-panel">
+        <h2>Concept Preview</h2>
+        <div id="pin-gate">
+          <p class="muted">Enter your 5-attempt PIN to view the concept. Each attempt — right or wrong — uses one of your 5 views.</p>
+          <form id="pin-form">
+            <input type="text" id="pin-input" inputmode="numeric" maxlength="6" placeholder="6-digit PIN" required>
+            <button type="submit">View Preview</button>
+          </form>
+          <p id="pin-error" class="error hidden"></p>
+          <p id="pin-attempts" class="muted hidden"></p>
+        </div>
+        <div id="preview-frame-wrap" class="hidden">
+          <iframe id="preview-frame" sandbox="allow-scripts" title="Concept preview"></iframe>
+        </div>
+      </div>
+
+      <div class="panel" id="comments-panel">
+        <h2>Comments &amp; Revisions</h2>
+        <div id="comments-list"></div>
+        <form id="comment-form">
+          <textarea id="comment-input" placeholder="Add a comment or revision request..." required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

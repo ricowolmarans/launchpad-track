@@ -4,8 +4,25 @@ let currentOrder = null;
 
 const $ = (id) => document.getElementById(id);
 
-$('lookup-form').addEventListener('submit', async (e) => {
-  e.preventDefault();
+function withSubmitGuard(form, handler) {
+  let busy = false;
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (busy) return;
+    busy = true;
+    const btn = form.querySelector('button');
+    const originalText = btn ? btn.textContent : null;
+    if (btn) { btn.disabled = true; btn.textContent = '...'; }
+    try {
+      await handler(e);
+    } finally {
+      busy = false;
+      if (btn) { btn.disabled = false; btn.textContent = originalText; }
+    }
+  });
+}
+
+withSubmitGuard($('lookup-form'), async () => {
   const username = $('tracking_username').value.trim();
   $('lookup-error').classList.add('hidden');
 
@@ -29,8 +46,7 @@ function renderOrder() {
   loadComments();
 }
 
-$('pin-form').addEventListener('submit', async (e) => {
-  e.preventDefault();
+withSubmitGuard($('pin-form'), async () => {
   const pin = $('pin-input').value.trim();
   $('pin-error').classList.add('hidden');
 
@@ -66,8 +82,7 @@ async function loadComments() {
   list.scrollTop = list.scrollHeight;
 }
 
-$('comment-form').addEventListener('submit', async (e) => {
-  e.preventDefault();
+withSubmitGuard($('comment-form'), async () => {
   const message = $('comment-input').value.trim();
   if (!message) return;
 

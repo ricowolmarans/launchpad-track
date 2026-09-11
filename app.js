@@ -60,7 +60,7 @@ withSubmitGuard($('pin-form'), async () => {
     const data = await res.json();
     if (!res.ok) throw new Error(data.error || 'Incorrect PIN');
 
-    $('preview-frame').srcdoc = data.html;
+    $('preview-frame').src = `${API}${data.preview_url}`;
     $('pin-gate').classList.add('hidden');
     $('preview-frame-wrap').classList.remove('hidden');
   } catch (err) {

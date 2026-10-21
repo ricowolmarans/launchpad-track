@@ -4,6 +4,9 @@ let currentOrder = null;
 
 const $ = (id) => document.getElementById(id);
 
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+
 function withSubmitGuard(form, handler) {
   let busy = false;
   form.addEventListener('submit', async (e) => {
@@ -43,6 +46,10 @@ function renderOrder() {
   $('order-company').textContent = currentOrder.company_name;
   $('order-status').textContent = currentOrder.status.replace('_', ' ');
   $('order-tier').textContent = currentOrder.package_tier;
+  // Private order data: keep it out of search results and update the tab title
+  let robots = document.querySelector('meta[name="robots"]');
+  if (robots) robots.setAttribute('content', 'noindex, nofollow');
+  document.title = `${currentOrder.company_name} — Project Tracking | Launchpad Studio`;
   loadComments();
   loadInvoices();
 }

@@ -1,33 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Track Your Project — Launchpad Studio</title>
+<title>Track Your Website Project Online | Launchpad Studio South Africa</title>
+<meta name="description" content="Check the progress of your Launchpad Studio website project. Enter your tracking username to see status, view your concept preview, download quotes and invoices, and send revision requests.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Launchpad Studio">
+<meta name="theme-color" content="#FAF9F6">
+<link rel="canonical" href="https://track.launchpad-studio.co.za/">
+<link rel="alternate" hreflang="en-ZA" href="https://track.launchpad-studio.co.za/">
+<link rel="alternate" hreflang="x-default" href="https://track.launchpad-studio.co.za/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Launchpad Studio">
+<meta property="og:locale" content="en_ZA">
+<meta property="og:title" content="Track Your Website Project Online | Launchpad Studio">
+<meta property="og:description" content="See your website project status, preview your concept, download quotes and invoices, and request revisions, all in one place.">
+<meta property="og:url" content="https://track.launchpad-studio.co.za/">
+<meta property="og:image" content="https://track.launchpad-studio.co.za/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Launchpad Studio project tracking">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Track Your Website Project Online | Launchpad Studio">
+<meta name="twitter:description" content="See your website project status, preview your concept, download quotes and invoices, and request revisions.">
+<meta name="twitter:image" content="https://track.launchpad-studio.co.za/og-image.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://launchpad-studio.co.za/#organization",
+      "name": "Launchpad Studio",
+      "url": "https://launchpad-studio.co.za/",
+      "areaServed": { "@type": "Country", "name": "South Africa" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://track.launchpad-studio.co.za/#website",
+      "url": "https://track.launchpad-studio.co.za/",
+      "name": "Launchpad Studio Project Tracking",
+      "inLanguage": "en-ZA",
+      "publisher": { "@id": "https://launchpad-studio.co.za/#organization" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://track.launchpad-studio.co.za/#webpage",
+      "url": "https://track.launchpad-studio.co.za/",
+      "name": "Track Your Website Project Online",
+      "description": "Check the progress of your Launchpad Studio website project, preview your concept, download quotes and invoices, and send revision requests.",
+      "inLanguage": "en-ZA",
+      "isPartOf": { "@id": "https://track.launchpad-studio.co.za/#website" },
+      "breadcrumb": { "@id": "https://track.launchpad-studio.co.za/#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://track.launchpad-studio.co.za/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Launchpad Studio", "item": "https://launchpad-studio.co.za/" },
+        { "@type": "ListItem", "position": 2, "name": "Track your project", "item": "https://track.launchpad-studio.co.za/" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where do I find my tracking username?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Your tracking username is sent to you by Launchpad Studio when your project starts. It usually looks like your company name with dashes, for example rico-motors. Can't find it? Contact us and we'll resend it." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the concept preview PIN work?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Your concept preview is protected by a 6-digit PIN. You get 5 views, and every attempt, right or wrong, uses one of them, so enter it carefully." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I request changes to my website design?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Once you open your project, use the Comments & Revisions section to send a message. Launchpad Studio sees it straight away and replies in the same thread." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I download my quote or invoice?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every quote and invoice for your project is listed under Invoices & Quotes with a Download button that gives you a printable PDF in South African rand (ZAR)." }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
   <header class="site-header">
     <div class="wrap">
-      <span class="brand">LAUNCHPAD<span class="accent">.</span></span>
+      <a class="brand" href="https://launchpad-studio.co.za/" aria-label="Launchpad Studio home">LAUNCHPAD<span class="accent">.</span></a>
       <span class="tag">Project Tracking</span>
     </div>
   </header>
 
-  <main class="wrap">
-    <section id="lookup-screen">
-      <h1>Track your order</h1>
-      <p class="muted">Enter your tracking username to check progress.</p>
+  <main id="main" class="wrap">
+    <section id="lookup-screen" aria-labelledby="lookup-title">
+      <h1 id="lookup-title">Track your website project</h1>
+      <p class="muted">Enter your tracking username to check progress, preview your concept, and see your quotes and invoices.</p>
       <form id="lookup-form">
-        <input type="text" id="tracking_username" placeholder="e.g. rico-motors" required autocomplete="off">
+        <label class="sr-only" for="tracking_username">Tracking username</label>
+        <input type="text" id="tracking_username" placeholder="e.g. rico-motors" required autocomplete="off" autocapitalize="none" spellcheck="false">
         <button type="submit">Continue</button>
       </form>
-      <p id="lookup-error" class="error hidden"></p>
+      <p id="lookup-error" class="error hidden" role="alert"></p>
+
+      <div class="info">
+        <h2>What you can do here</h2>
+        <ul>
+          <li><strong>Check your project status.</strong> See exactly where your website is, from first concept to launch.</li>
+          <li><strong>Preview your concept.</strong> View your design draft securely with your personal PIN.</li>
+          <li><strong>Get quotes and invoices.</strong> Download printable PDFs in rand (ZAR).</li>
+          <li><strong>Request revisions.</strong> Message the Launchpad Studio team directly from your project page.</li>
+        </ul>
+
+        <h2>Frequently asked questions</h2>
+        <details>
+          <summary>Where do I find my tracking username?</summary>
+          <p>Launchpad Studio sends it to you when your project starts. It usually looks like your company name with dashes, for example <em>rico-motors</em>. Can't find it? Contact us and we'll resend it.</p>
+        </details>
+        <details>
+          <summary>How does the concept preview PIN work?</summary>
+          <p>Your concept preview is protected by a 6-digit PIN. You get 5 views, and every attempt, right or wrong, uses one of them, so enter it carefully.</p>
+        </details>
+        <details>
+          <summary>How do I request changes to my website design?</summary>
+          <p>Open your project and use the Comments &amp; Revisions section to send a message. We see it straight away and reply in the same thread.</p>
+        </details>
+        <details>
+          <summary>Can I download my quote or invoice?</summary>
+          <p>Yes. Every quote and invoice appears under Invoices &amp; Quotes with a Download button that gives you a printable PDF.</p>
+        </details>
+
+        <p class="muted">Not a client yet? Visit <a href="https://launchpad-studio.co.za/">Launchpad Studio</a> to see how we build websites for South African businesses.</p>
+      </div>
+      <noscript><p class="error">Project tracking needs JavaScript. Please enable it to continue.</p></noscript>
     </section>
 
-    <section id="order-screen" class="hidden">
+    <section id="order-screen" class="hidden" aria-live="polite">
       <div class="order-head">
         <h1 id="order-company">—</h1>
         <span id="order-status" class="status-pill">—</span>
@@ -39,14 +163,15 @@
         <div id="pin-gate">
           <p class="muted">Enter your 5-attempt PIN to view the concept. Each attempt — right or wrong — uses one of your 5 views.</p>
           <form id="pin-form">
+            <label class="sr-only" for="pin-input">6-digit PIN</label>
             <input type="text" id="pin-input" inputmode="numeric" maxlength="6" placeholder="6-digit PIN" required>
             <button type="submit">View Preview</button>
           </form>
-          <p id="pin-error" class="error hidden"></p>
+          <p id="pin-error" class="error hidden" role="alert"></p>
           <p id="pin-attempts" class="muted hidden"></p>
         </div>
         <div id="preview-frame-wrap" class="hidden">
-          <iframe id="preview-frame" sandbox="allow-scripts" title="Concept preview"></iframe>
+          <iframe id="preview-frame" sandbox="allow-scripts" title="Concept preview" loading="lazy"></iframe>
         </div>
       </div>
 
@@ -59,6 +184,7 @@
         <h2>Comments &amp; Revisions</h2>
         <div id="comments-list"></div>
         <form id="comment-form">
+          <label class="sr-only" for="comment-input">Comment</label>
           <textarea id="comment-input" placeholder="Add a comment or revision request..." required></textarea>
           <button type="submit">Send</button>
         </form>
@@ -66,6 +192,13 @@
     </section>
   </main>
 
-  <script src="app.js"></script>
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>&copy; <span id="year">2026</span> Launchpad Studio &middot; South Africa</span>
+      <a href="https://launchpad-studio.co.za/">Main site</a>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
 </body>
 </html>
